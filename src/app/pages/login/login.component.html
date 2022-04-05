@@ -1,0 +1,116 @@
+<div class="vh-100 mt-5">
+    <div class="rounded d-flex justify-content-center">
+        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-12 shadow-lg p-5 bg-light">
+            <div class="text-center">
+                <h3 class="text-primary">Registro</h3>
+            </div>
+            <div class="row" *ngIf="loading">
+                <br>
+                <div class="col-sm-12">
+
+                    <div class="alert alert-success text-center">
+                        <strong>Ingresando..</strong>
+                        <br>
+                        <i class="fa fa-refresh fa-spin fa-2x"></i>
+                        <br>
+                        <span>Espere por favor</span>
+                    </div>
+
+                </div>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!loading">
+                <div class="p-4">
+                    <div class="input-group mb-3 row justify-content-center">
+
+                        <div class="col-lg-6">
+
+
+                            <label>Nombre</label>
+                            <input type="text" formControlName="name" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['name'].errors }" />
+                            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                                <div *ngIf="f['name'].errors['required']">El nombre es requerido</div>
+                                <div *ngIf="f['name'].errors['minlength']">
+                                    El nombre debe tener al menos 2 un caracteres
+                                </div>
+                                <div *ngIf="f['name'].errors['maxlength']">
+                                    El nombre no puede exceder 48 caracteres
+                                </div>
+                                <div *ngIf="f['name'].errors['fullNameValidate']">
+                                    El nombre completo no debe exceder los 50 caracteres
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <label>Apellido</label>
+                            <input type="text" formControlName="lastName" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
+                            <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                                <div *ngIf="f['lastName'].errors['required']">El apellido es requerido</div>
+                                <div *ngIf="f['lastName'].errors['minlength']">
+                                    El apellido debe tener al menos 2 un caracteres
+                                </div>
+                                <div *ngIf="f['lastName'].errors['maxlength']">
+                                    El apellido no puede exceder 48 caracteres
+                                </div>
+                                <div *ngIf="f['lastName'].errors['fullNameValidate']">
+                                    El nombre completo no debe exceder los 50 caracteres
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="input-group mb-3 row justify-content-center">
+
+                        <div class="col-lg-6">
+                            <label>Telefono</label>
+                            <input type="text" formControlName="phoneNumber" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['phoneNumber'].errors }" />
+                            <div *ngIf="submitted && f['phoneNumber'].errors" class="invalid-feedback">
+                                <div *ngIf="f['phoneNumber'].errors['required']">El telefono es requerido</div>
+                                <div *ngIf="f['phoneNumber'].errors['minlength']">
+                                    El telefono debe tener al menos 5 un caracteres
+                                </div>
+
+                                <div *ngIf="f['phoneNumber'].errors['maxlength']">
+                                    El telefono no puede exceder 10 caracteres
+                                </div>
+                                <div *ngIf="f['phoneNumber'].errors['pattern']">
+                                    El telefono debe ser numerico
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label>Email</label>
+                            <input type="text" formControlName="email" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                <div *ngIf="f['email'].errors['required']">El email es requerido</div>
+                                <div *ngIf="f['email'].errors['email']">El email no es valido</div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="text-center">
+
+                        <button class="btn btn-primary text-center mt-2" type="submit">
+                            Registrarme
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
