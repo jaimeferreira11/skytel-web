@@ -1,27 +1,89 @@
-# SkytelWeb
+<p align="center">
+  <h3 align="center">Skytel</h3>
+  <p align="center">
+    Desafío técnico
+</p>
+  
+</p>
+<details open="open">
+  <summary>Contenido</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Sobre el proyecto</a>
+      <ul>
+        <li><a href="#built-with">Construído con</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Primeros pasos</a>
+      <ul>
+        <li><a href="#prerequisites">Pre requisitos</a></li>
+        <li><a href="#installation">Instalación</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Uso</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ol>
+</details>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+## Sobre el proyecto
 
-## Development server
+El proyecto forma parte del desafío técnico de Skytel.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Debes desarrollar un formulario web que envíe al backend la siguiente información:
 
-## Code scaffolding
+- Nombre completo ( texto, entre 1 - 50 caracteres )
+- Teléfono ( numérico, entre 5 - 10 dígitos )
+- Email ( formato email )
+  El frontend debe validar que los datos ingresados sean correctos. Debes mostrar al usuario los
+  errores de validación que hayan ocurrido.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Debe ser responsive.
+La información debe enviarse a una API desarrollada por vos.
+Debes mostrar en pantalla la información devuelta por el backend.
 
-## Build
+### Construído con
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+- [Bootstrap 5](https://getbootstrap.com/)
 
-## Running unit tests
+## Primeros pasos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Pre requisitos
 
-## Running end-to-end tests
+- yarn o npm
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Instalación
 
-## Further help
+1. Clonar el repositorio
+   ```sh
+   https://github.com/jaimeferreira11/skytel-web.git
+   ```
+2. Instalar paquetes yarn/NPM
+   ```sh
+   yarn / npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Ejecución
+
+Ejecutar localmente
+
+```
+ng serve
+```
+
+o
+
+```sh
+   yarn / npm start
+```
+
+Navegue a `http://localhost:4200/`
+
+Para cambiar la url del backend, modifique el archivo `enviroments/enviroments.ts`
+
+Project backend: [https://github.com/jaimeferreira11/skytel-rest](https://github.com/jaimeferreira11/skytel-rest)
+
+## Contacto
+
+Lic. Jaime Ferreira - jaimeferreira11@gmail.com
